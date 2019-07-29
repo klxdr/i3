@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+LNGCODE=$(xset -q | grep -A 0 'LED' | cut -c59-67)
+case $LNGCODE in   
+    "00000002")     
+	LNG=$(echo "EN") ;;
+    "00001002")
+        LNG=$(echo "RU") ;;
+esac
+
+case $LNG in
+  "EN")
+    CLR=\#00FF00 ;; # green
+  "RU")
+    CLR=\#FF0000 ;; # red
+  *)
+    CLR=\#FFFFFF ;; # all others default-white
+esac
+echo "$LNG"
+echo "$LNG"
+echo "$CLR"
