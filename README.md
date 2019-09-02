@@ -10,3 +10,9 @@ add
 [layoutindicator]
 interval=1
 
+### additional installation
+
+sudo apt install numlockx
+sudo apt install i3lock
+
+
