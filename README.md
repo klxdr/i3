@@ -1,13 +1,13 @@
 # i3 config
 create blocklet
 
-copy layoutindicator to /usr/share/i3blocks/
-chmod +x /usr/share/i3blocks/layoutindicator
+copy layswitch to /usr/share/i3blocks/
+chmod +x /usr/share/i3blocks/layswitch
 
 cp /etc/i3blocks.conf ~/.i3blocks.conf
 
 add
-[layoutindicator]
+[layswitch]
 interval=1
 
 ### additional installation
@@ -15,4 +15,7 @@ interval=1
 sudo apt install numlockx
 sudo apt install i3lock
 
+
+### xkb
+xkb for each window source https://github.com/Zebradil/xkb-switch-i3
 
