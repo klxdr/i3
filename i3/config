@@ -75,6 +75,9 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
+# screenshot
+bindsym --release $mod+Print exec xfce4-screenshooter -r -o google-chrome
+
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
@@ -165,6 +168,13 @@ bindsym $mod+r mode "resize"
 #keyboard layout
 exec --no-startup-id "setxkbmap -model pc105 -layout us,ru -option grp:alt_shift_toggle"
 
+#fix kb
+bindsym $mod+Shift exec "setxkbmap -model pc105 -layout us,ru -option grp:alt_shift_toggle"
+
+# xkb for each window source https://github.com/Zebradil/xkb-switch-i3
+exec_always --no-startup-id "LD_LIBRARY_PATH=/usr/local/lib xkb-switch --i3"
+
+
 #numlock on on startup
 exec_always --no-startup-id numlockx on
 
@@ -187,7 +197,7 @@ mode "$mode_system" {
     bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
     bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -198,4 +208,7 @@ bindsym $mod+Pause mode "$mode_system"
 exec google-chrome
 
 exec phpstorm
+
+exec --no-startup-id exec ~/.dropbox-dist/dropboxd
+
 
