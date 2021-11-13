@@ -1,4 +1,6 @@
 # i3 config
+
+### adding layout indicator
 create blocklet
 
 copy layswitch to /usr/share/i3blocks/
