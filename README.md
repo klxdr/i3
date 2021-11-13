@@ -21,3 +21,6 @@ sudo apt install i3lock
 ### xkb
 xkb for each window source https://github.com/Zebradil/xkb-switch-i3
 
+### guide
+
+[https://i3wm.org/docs/userguide.html](https://i3wm.org/docs/userguide.html)
